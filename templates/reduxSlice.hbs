@@ -1,0 +1,21 @@
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+
+export type T{{pascalCase name}} = {};
+
+const initialState: T{{pascalCase name}} = {};
+
+export const {{camelCase name}}Slice = createSlice({
+  name: '{{pascalCase name}}',
+  initialState,
+  reducers: {
+    get{{pascalCase name}}Details: (state, action: PayloadAction<T{{pascalCase name}}>) => {
+      return (state = Object.assign({}, state, action.payload));
+    },
+    reset{{pascalCase name}}: () => initialState,
+  },
+});
+
+export const { get{{pascalCase name}}Details } = {{camelCase name}}Slice.actions;
+
+export default {{camelCase name}}Slice.reducer;
